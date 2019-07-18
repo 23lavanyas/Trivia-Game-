@@ -10,8 +10,8 @@ import UIKit
 
 class TriviaGameViewController: UIViewController {
 
-    var questions = ["Hg is the chemical symbol of what element?", "According to Greek mythology, who was the first woman on earth?", "Who was the US president during WW2?", "Who are Prince William's kids?", "Where is the Bermuda Triangle?"]
-    var answers = ["Mercury", "Pandora", "Franklin Roosevelt", "Prince George and Princess Charlotte", "In the western part of the North Atlantic Ocean"]
+    var questions = ["Hg is the chemical symbol of what element?", "According to Greek mythology, who was the first woman on earth?", "Who was the US president during WW2?", "Who are Prince William's kids?", "Where is the Bermuda Triangle?", "How many bones are in the human body?", "Which city is known as the City of Love?", "Who created Tom and Jerry?", "In Home Alone, when was Kevin left alone?", "What is the rarest eye color for redheads?", "Which country owns every panda in the world?"]
+    var answers = ["Mercury", "Pandora", "Franklin Roosevelt", "Prince George and Princess Charlotte", "In the western part of the North Atlantic Ocean", "206", "Paris", "William Hanna and Joseph Barbara", "During Christmas break", "Blue", "China"]
     var currQn = 0
     var score = 0
     
