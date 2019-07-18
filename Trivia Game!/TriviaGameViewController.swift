@@ -43,9 +43,9 @@ class TriviaGameViewController: UIViewController {
     currQn += 1
         if (currQn >= questions.count) {
             if (score > questions.count/2) {
-            endOfGameMessage.text = "Congratulations! You've completed this trivia game."
+            endOfGameMessage.text = "Congratulations! You've completed this trivia game. Go back to home for another shot!"
             } else {
-                endOfGameMessage.text = "Don't worry, practice makes perfect :)"
+                endOfGameMessage.text = "Don't worry, practice makes perfect :) Go back to home for another shot!"
             }
         }
         else {
