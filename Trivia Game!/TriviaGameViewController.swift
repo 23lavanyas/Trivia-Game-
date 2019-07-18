@@ -13,7 +13,9 @@ class TriviaGameViewController: UIViewController {
     var questions = ["Hg is the chemical symbol of what element?", "According to Greek mythology, who was the first woman on earth?", "Who was the US president during WW2?", "Who are Prince William's kids?", "Where is the Bermuda Triangle?"]
     var answers = ["Mercury", "Pandora", "Franklin Roosevelt", "Prince George and Princess Charlotte", "In the western part of the North Atlantic Ocean"]
     var currQn = 0
+    var score = 0
     
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var endOfGameMessage: UILabel!
     @IBOutlet weak var userAnswerTextField: UITextField!
     @IBOutlet weak var validationLabel: UILabel!
@@ -34,16 +36,22 @@ class TriviaGameViewController: UIViewController {
         
         if(userAnswer!.caseInsensitiveCompare(correctAnswer) == .orderedSame) {
         validationLabel.text = "Good job!"
+        score += 1
         } else {
             validationLabel.text = "Oops! The correct answer is actually \(correctAnswer)."
         }
     currQn += 1
         if (currQn >= questions.count) {
+            if (score > questions.count/2) {
             endOfGameMessage.text = "Congratulations! You've completed this trivia game."
+            } else {
+                endOfGameMessage.text = "Don't worry, practice makes perfect :)"
+            }
         }
         else {
             questionLabel.text = questions[currQn]
         }
         userAnswerTextField.text = ""
+        scoreLabel.text = "Score: \(String(score))"
 }
 }
