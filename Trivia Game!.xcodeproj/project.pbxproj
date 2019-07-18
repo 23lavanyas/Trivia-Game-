@@ -13,6 +13,7 @@
 		03CB0BBA22E0D9810089748C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03CB0BB922E0D9810089748C /* Assets.xcassets */; };
 		03CB0BBD22E0D9810089748C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03CB0BBB22E0D9810089748C /* LaunchScreen.storyboard */; };
 		03CB0BC722E0E17A0089748C /* TriviaPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 03CB0BC622E0E17A0089748C /* TriviaPic.png */; };
+		03CB0BC922E0EFEC0089748C /* TriviaGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CB0BC822E0EFEC0089748C /* TriviaGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		03CB0BBC22E0D9810089748C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03CB0BBE22E0D9810089748C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03CB0BC622E0E17A0089748C /* TriviaPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TriviaPic.png; path = "../../../SpurIQ Images/Trivia/TriviaPic.png"; sourceTree = "<group>"; };
+		03CB0BC822E0EFEC0089748C /* TriviaGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				03CB0BB222E0D9800089748C /* AppDelegate.swift */,
 				03CB0BB422E0D9800089748C /* ViewController.swift */,
 				03CB0BB622E0D9800089748C /* Main.storyboard */,
+				03CB0BC822E0EFEC0089748C /* TriviaGameViewController.swift */,
 				03CB0BB922E0D9810089748C /* Assets.xcassets */,
 				03CB0BBB22E0D9810089748C /* LaunchScreen.storyboard */,
 				03CB0BBE22E0D9810089748C /* Info.plist */,
@@ -141,6 +144,7 @@
 			files = (
 				03CB0BB522E0D9800089748C /* ViewController.swift in Sources */,
 				03CB0BB322E0D9800089748C /* AppDelegate.swift in Sources */,
+				03CB0BC922E0EFEC0089748C /* TriviaGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

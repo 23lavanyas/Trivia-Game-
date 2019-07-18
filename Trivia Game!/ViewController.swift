@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var questions = ["question 1", "question 2", "question 3", "question 4", "question 5"]
+    var answers = ["answer 1", "answer 2", "answer 3", "answer 4", "answer 5"]
+    var currQn = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,4 +21,3 @@ class ViewController: UIViewController {
 
 
 }
-
