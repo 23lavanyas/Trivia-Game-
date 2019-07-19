@@ -11,10 +11,16 @@ import UIKit
 class TriviaGameViewController: UIViewController {
 
     var questions = ["Hg is the chemical symbol of what element?", "According to Greek mythology, who was the first woman on earth?", "Who was the US president during WW2?", "Who are Prince William's kids?", "Where is the Bermuda Triangle?", "How many bones are in the human body?", "Which city is known as the City of Love?", "Who created Tom and Jerry?", "In Home Alone, when was Kevin left alone?", "What is the rarest eye color for redheads?", "Which country owns every panda in the world?"]
-    var answers = ["Mercury", "Pandora", "Franklin Roosevelt", "Prince George and Princess Charlotte", "In the western part of the North Atlantic Ocean", "206", "Paris", "William Hanna and Joseph Barbara", "During Christmas break", "Blue", "China"]
+    var answers = ["Mercury", "Pandora", "Franklin Roosevelt", "Prince George and Princess Charlotte", "in the western part of the North Atlantic Ocean", "206", "Paris", "William Hanna and Joseph Barbara", "during Christmas break", "blue", "China"]
     var currQn = 0
     var score = 0
-    
+
+    @IBAction func textFieldEnter(_ sender: Any) {
+        processAnswer()
+        
+    }
+
+    @IBOutlet weak var showAnswerSwitch: UISwitch!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var endOfGameMessage: UILabel!
     @IBOutlet weak var userAnswerTextField: UITextField!
@@ -27,6 +33,10 @@ class TriviaGameViewController: UIViewController {
     
     }
     @IBAction func checkButtonClick(_ sender: Any) {
+        processAnswer()
+
+}
+    func processAnswer() {
         if(userAnswerTextField.text == "") {
             validationLabel.text = "Please enter an answer."
             return
@@ -35,15 +45,19 @@ class TriviaGameViewController: UIViewController {
         let correctAnswer = answers[currQn]
         
         if(userAnswer!.caseInsensitiveCompare(correctAnswer) == .orderedSame) {
-        validationLabel.text = "Good job!"
-        score += 1
+            validationLabel.text = "Good job!"
+            score += 1
         } else {
-            validationLabel.text = "Oops! The correct answer is actually \(correctAnswer)."
+            if(showAnswerSwitch.isOn) {
+                validationLabel.text = "Oops! The correct answer is actually \(correctAnswer)."
+            } else {
+                validationLabel.text = "Oops! Wrong answer."
+            }
         }
-    currQn += 1
+        currQn += 1
         if (currQn >= questions.count) {
             if (score > questions.count/2) {
-            endOfGameMessage.text = "Congratulations! You've completed this trivia game. Go back to home for another shot!"
+                endOfGameMessage.text = "Congratulations! You've completed this trivia game. Go back to home for another shot!"
             } else {
                 endOfGameMessage.text = "Don't worry, practice makes perfect :) Go back to home for another shot!"
             }
@@ -53,5 +67,6 @@ class TriviaGameViewController: UIViewController {
         }
         userAnswerTextField.text = ""
         scoreLabel.text = "Score: \(String(score))"
-}
+    }
+    
 }

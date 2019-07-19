@@ -51,6 +51,17 @@
                                 <rect key="frame" x="329" y="41" width="86" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0H-3b-4XD">
+                                <rect key="frame" x="104" y="542" width="202" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="click me if you're bored :P">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3Mz-O9-5zV" kind="show" id="7oi-qV-0WD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.8592453134862541" green="1" blue="0.86155010352094152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,6 +107,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEnter:" destination="4UI-AQ-b1y" eventType="primaryActionTriggered" id="IJY-JV-WUp"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NU-9G-ZBb">
                                 <rect key="frame" x="20" y="391" width="375" height="66"/>
@@ -105,7 +119,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Show answers if I got it wrong" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rnn-8H-ChO">
-                                <rect key="frame" x="20" y="457" width="279" height="26"/>
+                                <rect key="frame" x="20" y="457" width="393" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
@@ -148,15 +162,15 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="0T3-bt-J5e"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1s-rh-m2n">
-                                <rect key="frame" x="14" y="734" width="380" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJZ-5T-S13">
+                                <rect key="frame" x="17" y="491" width="380" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJZ-5T-S13">
-                                <rect key="frame" x="17" y="491" width="380" height="94"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1s-rh-m2n">
+                                <rect key="frame" x="14" y="749" width="380" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -170,6 +184,7 @@
                         <outlet property="endOfGameMessage" destination="NJZ-5T-S13" id="1qD-yL-9ht"/>
                         <outlet property="questionLabel" destination="aUM-gF-OEQ" id="8NH-wZ-5OZ"/>
                         <outlet property="scoreLabel" destination="H1s-rh-m2n" id="f2M-3y-ZRY"/>
+                        <outlet property="showAnswerSwitch" destination="TwK-Ou-nmC" id="OLh-OV-HWp"/>
                         <outlet property="userAnswerTextField" destination="WAU-7f-7Ht" id="xxV-Ax-AaM"/>
                         <outlet property="validationLabel" destination="3NU-9G-ZBb" id="Rxj-HQ-ijO"/>
                     </connections>
@@ -178,11 +193,75 @@
             </objects>
             <point key="canvasLocation" x="724.63768115942037" y="26.785714285714285"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="mOA-4Q-ZgP">
+            <objects>
+                <viewController id="3Mz-O9-5zV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IFd-3b-bxl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happybdaymeme" translatesAutoresizingMaskIntoConstraints="NO" id="kVn-jX-e8g">
+                                <rect key="frame" x="79" y="282" width="439" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="healthymeme" translatesAutoresizingMaskIntoConstraints="NO" id="0cE-6O-Fto">
+                                <rect key="frame" x="-56" y="282" width="333" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wavingmeme" translatesAutoresizingMaskIntoConstraints="NO" id="uk5-Kl-bvN">
+                                <rect key="frame" x="101" y="460" width="395" height="188"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="partnermeme" translatesAutoresizingMaskIntoConstraints="NO" id="X1c-r7-3Au">
+                                <rect key="frame" x="-73" y="460" width="366" height="181"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pizzameme" translatesAutoresizingMaskIntoConstraints="NO" id="Zgi-hk-MGw">
+                                <rect key="frame" x="202" y="663" width="192" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="skipschoolmeme" translatesAutoresizingMaskIntoConstraints="NO" id="HB5-3x-JE0">
+                                <rect key="frame" x="-8" y="663" width="237" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shoesalememe" translatesAutoresizingMaskIntoConstraints="NO" id="e23-t6-iAU">
+                                <rect key="frame" x="20" y="129" width="179" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hwmeme" translatesAutoresizingMaskIntoConstraints="NO" id="lAS-6Q-3O3">
+                                <rect key="frame" x="178" y="151" width="240" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ENJOY :)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I6y-d1-jU8">
+                                <rect key="frame" x="134" y="75" width="147" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8746490536" green="1" blue="0.88119183280000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="eJV-7i-ZW0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Sl-vC-Y1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1398.5507246376812" y="26.785714285714285"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Button - Teal Bear" width="327" height="60"/>
         <image name="Spur IQ Icon Logo" width="311" height="311"/>
+        <image name="happybdaymeme" width="736" height="736"/>
+        <image name="healthymeme" width="620" height="620"/>
+        <image name="hwmeme" width="564" height="423"/>
+        <image name="partnermeme" width="300" height="300"/>
+        <image name="pizzameme" width="225" height="224"/>
+        <image name="shoesalememe" width="700" height="461"/>
+        <image name="skipschoolmeme" width="1252" height="1252"/>
         <image name="trivia" width="311" height="162"/>
         <image name="trivialed2" width="1000" height="500"/>
+        <image name="wavingmeme" width="562" height="720"/>
     </resources>
 </document>
